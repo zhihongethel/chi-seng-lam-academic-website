@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { profile, researchAreas, selectedPublications } from '../data/site';
+const base = import.meta.env.BASE_URL;
+const linkTo = (href: string) => `${base}${href}`.replace(/\/+/g, '/');
+---
+
+<BaseLayout>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Full Professor · University of Macau</p>
+        <h1 class="display">Chi-Seng Lam<br /><span lang="zh-Hant">林智聲</span></h1>
+        <p class="hero-subtitle">Advancing efficient power conversion, intelligent energy systems, and integrated power management from circuits to the grid.</p>
+        <div class="hero-actions">
+          <a class="button" href={linkTo('research/')}>Explore research <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="button secondary" href={linkTo('openings-contact/')}>Join the group</a>
+        </div>
+      </div>
+      <figure class="portrait-wrap">
+        <img class="portrait" src={linkTo('images/chi-seng-lam.jpg')} alt="Professor Chi-Seng Lam" width="1320" height="1616" />
+        <figcaption class="portrait-caption">Power electronics · Integrated circuits</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Academic profile at a glance">
+    <div class="container stats-grid">
+      <div class="stat"><strong>220+</strong><span>Technical papers</span></div>
+      <div class="stat"><strong>5</strong><span>Books coauthored or edited</span></div>
+      <div class="stat"><strong>15</strong><span>US & Chinese patents</span></div>
+      <div class="stat"><strong>7</strong><span>IEEE conference tutorials</span></div>
+    </div>
+  </section>
+
+  <section class="section white">
+    <div class="container bio-grid">
+      <div>
+        <p class="eyebrow">About</p>
+        <div class="bio-copy">
+          <p>Professor Chi-Seng Lam is a Full Professor at the University of Macau whose work spans power electronics and power management integrated circuits. He received his PhD in Electrical and Electronics Engineering from UM in 2012 and completed the Clare Hall Study Programme at the University of Cambridge in 2019.</p>
+          <p>His research brings together high-efficiency conversion, power quality, renewable generation, voltage reference circuits, and wireless power transfer—connecting fundamental circuit innovation with practical energy challenges.</p>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="button secondary" href={profile.officialProfile} target="_blank" rel="noreferrer">Official UM profile <span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="button secondary" href={profile.googleScholar} target="_blank" rel="noreferrer">Google Scholar <span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <aside class="affiliation-card">
+        <h3>Appointments</h3>
+        <ul>{profile.affiliations.map((item) => <li>{item}</li>)}</ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Research focus</p>
+        <div><h2>Power conversion across scales.</h2><p>From low-power integrated converters to grid-scale compensation, the group studies architectures and control methods that make electrical energy cleaner, more efficient, and more adaptable.</p></div>
+      </div>
+      <div class="research-list">
+        {researchAreas.map((area) => (
+          <article class="research-row">
+            <span class="number">{area.number}</span>
+            <h3>{area.title}</h3>
+            <div><p>{area.text}</p><div class="tags">{area.tags.map((tag) => <span class="tag">{tag}</span>)}</div></div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section white">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Selected work</p>
+        <div><h2>Recent publications</h2><p>Selected journal and conference work in power conversion, integrated circuits, smart grids, and wireless charging.</p></div>
+      </div>
+      <div class="publication-list">
+        {selectedPublications.slice(0, 4).map((pub) => (
+          <article class="publication">
+            <span class="pub-year">{pub.year}</span>
+            <div><h3>{pub.title}</h3><p>{pub.authors}</p><p><em>{pub.venue}</em></p></div>
+            <span class="pub-type">{pub.type}</span>
+          </article>
+        ))}
+      </div>
+      <p style="margin-top:32px"><a class="button secondary" href={linkTo('publications/')}>View selected publications <span class="arrow" aria-hidden="true">→</span></a></p>
+    </div>
+  </section>
+
+  <section class="section dark">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Research community</p>
+        <div><h2>Rigorous engineering. Practical impact.</h2><p>Research training connects circuit theory, system design, experimental validation, and international scholarly service.</p></div>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card dark-card"><span class="kicker">Mentorship</span><h3>Research-led training</h3><p>Opportunities for Master’s and PhD candidates, research assistants, and postdoctoral scholars.</p></article>
+        <article class="feature-card dark-card"><span class="kicker">Translation</span><h3>Patented innovation</h3><p>Six US and nine Chinese patents covering power conversion and compensation technologies.</p></article>
+        <article class="feature-card dark-card"><span class="kicker">Service</span><h3>Global engagement</h3><p>Editorial leadership and technical committee service across major IEEE power electronics publications and societies.</p></article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

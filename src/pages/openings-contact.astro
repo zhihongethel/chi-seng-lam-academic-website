@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import { profile } from '../data/site';
+---
+
+<BaseLayout title="Openings & Contact | Chi-Seng Lam" description="Research openings and contact information for Professor Chi-Seng Lam at the University of Macau.">
+  <PageHero eyebrow="Openings / Contact" title="Join us in building more efficient energy systems." lead="Applications are welcomed from motivated candidates with strong interests in power electronics, integrated power management, renewable energy, and wireless power transfer." meta={['Master’s', 'PhD', 'Research assistant', 'Postdoctoral']} />
+
+  <section class="section white">
+    <div class="container contact-grid">
+      <div>
+        <p class="eyebrow">Opportunities</p>
+        <h2 class="subhead">Who should apply</h2>
+        <p>Professor Lam is currently looking for Master’s and PhD candidates, research assistants, and postdoctoral scholars with strong interests aligned with the group’s research.</p>
+        <ul class="clean-list">
+          <li><strong>Power electronics</strong><small>Converters, power quality, grid-connected systems, and control</small></li>
+          <li><strong>Integrated circuits</strong><small>Power management ICs, DC–DC converters, and voltage references</small></li>
+          <li><strong>Energy applications</strong><small>Photovoltaics, wireless power transfer, and smart grids</small></li>
+        </ul>
+      </div>
+      <div class="contact-card">
+        <h2 class="subhead">Get in touch</h2>
+        <div class="contact-line"><small>Email</small><a href={`mailto:${profile.email}`}><strong>{profile.email}</strong></a></div>
+        <div class="contact-line"><small>Academic unit</small><span>State Key Laboratory of Analog and Mixed-Signal VLSI<br />Institute of Microelectronics<br />University of Macau</span></div>
+        <div class="contact-line"><small>Location</small><span>Research Building N21, University of Macau<br />Avenida da Universidade, Taipa, Macau, China</span></div>
+        <div class="contact-line"><small>Application material</small><span>Send a concise email with your CV, academic background, research interests, and intended position.</span></div>
+        <p style="margin:28px 0 0"><a class="button" href={`mailto:${profile.email}?subject=Prospective%20research%20candidate`}>Email Professor Lam <span aria-hidden="true">→</span></a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container quote-panel">
+      <blockquote>Strong fundamentals, intellectual curiosity, and the patience to make ideas work in hardware.</blockquote>
+      <p>Prospective researchers are encouraged to explain what they have built or studied and how it connects with the group’s current directions.</p>
+    </div>
+  </section>
+</BaseLayout>

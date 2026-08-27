@@ -1,0 +1,49 @@
+---
+import { nav } from '../data/site';
+
+const base = import.meta.env.BASE_URL;
+const path = Astro.url.pathname;
+const linkTo = (href: string) => `${base}${href}`.replace(/\/+/g, '/');
+const isCurrent = (href: string) => {
+  const target = linkTo(href);
+  return href === '' ? path === target || path === target.slice(0, -1) : path.startsWith(target);
+};
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href={linkTo('')} aria-label="Chi-Seng Lam, home">
+      <span class="brand-mark" aria-hidden="true">CSL</span>
+      <span class="brand-text">
+        <strong>Chi-Seng Lam</strong>
+        <span>University of Macau</span>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      {nav.map((item) => (
+        <a href={linkTo(item.href)} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>
+      ))}
+    </nav>
+
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
+      <span aria-hidden="true">☰</span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" data-open="false">
+    {nav.map((item) => (
+      <a href={linkTo(item.href)} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>
+    ))}
+  </nav>
+</header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+  const menu = document.querySelector<HTMLElement>('.mobile-nav');
+  toggle?.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') !== 'true';
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    if (menu) menu.dataset.open = String(open);
+  });
+</script>

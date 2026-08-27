@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import { awards, editorialRoles, reviewerAwards } from '../data/site';
+---
+
+<BaseLayout title="Awards & Service | Chi-Seng Lam" description="Awards, editorial appointments, and IEEE professional service of Professor Chi-Seng Lam at the University of Macau.">
+  <PageHero eyebrow="Awards & Service" title="Recognition through invention, scholarship, and service." lead="Awards for power-electronics innovation sit alongside editorial leadership and sustained technical service to the international research community." />
+
+  <section class="section white">
+    <div class="container two-col">
+      <div>
+        <p class="eyebrow">Selected honours</p>
+        <h2 class="subhead">Awards</h2>
+        <div class="timeline">
+          {awards.map(([year, title]) => <div class="timeline-item"><time>{year}</time><p>{title}</p></div>)}
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">Editorial leadership</p>
+        <h2 class="subhead">Associate Editor</h2>
+        <ul class="clean-list">{editorialRoles.map((role) => <li>{role}</li>)}</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container two-col">
+      <div>
+        <p class="eyebrow">Technical leadership</p>
+        <h2 class="subhead">IEEE service</h2>
+        <ul class="clean-list">
+          <li>Founding Chair, IEEE Macau IES Chapter</li>
+          <li>Founding Chair, IEEE TEC Macau Chapter</li>
+          <li>Vice-Chair, IEEE IES Technical Committee on Power Electronics</li>
+          <li>Chair, Young Professionals in Circuits and Systems, IEEE CASS (2023–2024)</li>
+          <li>Chair, Power Quality Subcommittee, IEEE IES PEL Technical Committee (2020–2022)</li>
+          <li>Chair, IEEE Macau CAS Chapter (2017–2018)</li>
+          <li>Vice-Chair, IEEE Macau Section (2016–2020)</li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">Peer-review recognition</p>
+        <h2 class="subhead">Editorial awards</h2>
+        <ul class="clean-list">{reviewerAwards.map((award) => <li>{award}</li>)}</ul>
+        <p style="margin-top:32px;color:var(--muted)">Professor Lam has also delivered seven tutorials at IEEE conferences including IECON, IPEMC-ECCE Asia, PEDG, ISCAS, and APPEEC.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

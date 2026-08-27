@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import { researchAreas } from '../data/site';
+---
+
+<BaseLayout title="Research | Chi-Seng Lam" description="Research themes of Professor Chi-Seng Lam at the University of Macau, spanning power electronics, power management ICs, renewable energy, and wireless power transfer.">
+  <PageHero eyebrow="Research" title="Circuits and systems for efficient electrification." lead="We investigate power conversion from silicon-level building blocks to grid-connected systems, combining topology, control, and experimental validation." meta={['Power electronics', 'Integrated circuits', 'Energy systems']} />
+
+  <section class="section">
+    <div class="container research-list">
+      {researchAreas.map((area) => (
+        <article class="research-row">
+          <span class="number">{area.number}</span>
+          <h2 style="margin:0;font-family:var(--serif);font-weight:400;line-height:1.15">{area.title}</h2>
+          <div><p>{area.text}</p><div class="tags">{area.tags.map((tag) => <span class="tag">{tag}</span>)}</div></div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section white">
+    <div class="container">
+      <div class="section-head"><p class="eyebrow">Method</p><div><h2>From principle to prototype.</h2><p>The research programme integrates analytical modelling, circuit and controller design, simulation, hardware prototyping, and measurement.</p></div></div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="kicker">01 · Model</span><h3>Understand the system</h3><p>Develop tractable models that reveal the design space, constraints, and key performance trade-offs.</p></article>
+        <article class="feature-card"><span class="kicker">02 · Design</span><h3>Create new architectures</h3><p>Translate insight into converter topologies, integrated circuits, and control strategies.</p></article>
+        <article class="feature-card"><span class="kicker">03 · Validate</span><h3>Measure real performance</h3><p>Prototype, test, and refine ideas against efficiency, power quality, reliability, and application needs.</p></article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

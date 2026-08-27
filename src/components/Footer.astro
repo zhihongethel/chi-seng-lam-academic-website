@@ -1,0 +1,25 @@
+---
+import { nav, profile } from '../data/site';
+const base = import.meta.env.BASE_URL;
+const linkTo = (href: string) => `${base}${href}`.replace(/\/+/g, '/');
+---
+
+<footer class="site-footer">
+  <div class="container footer-main">
+    <div>
+      <p class="footer-name">Chi-Seng Lam <span lang="zh-Hant">林智聲</span></p>
+      <p class="footer-affiliation">Full Professor at the State Key Laboratory of Analog and Mixed-Signal VLSI, Institute of Microelectronics, and Department of Electrical and Computer Engineering, University of Macau.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer navigation">
+      {nav.map((item) => <a href={linkTo(item.href)}>{item.label}</a>)}
+      <a href={profile.googleScholar} target="_blank" rel="noreferrer">Google Scholar</a>
+      <a href={profile.ieeeXplore} target="_blank" rel="noreferrer">IEEE Xplore</a>
+      <a href={profile.orcid} target="_blank" rel="noreferrer">ORCID</a>
+      <a href={`mailto:${profile.email}`}>{profile.email}</a>
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; {new Date().getFullYear()} Chi-Seng Lam. All rights reserved.</span>
+    <span>Academic profile information sourced from public University of Macau pages.</span>
+  </div>
+</footer>

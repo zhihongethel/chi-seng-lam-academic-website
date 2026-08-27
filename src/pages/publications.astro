@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import { highlyCitedPublications, profile, scholarlyMetrics, selectedPublications } from '../data/site';
+---
+
+<BaseLayout title="Publications | Chi-Seng Lam" description="Selected publications by Professor Chi-Seng Lam in power electronics, integrated circuits, renewable energy, and wireless power transfer.">
+  <PageHero eyebrow="Publications" title="Selected contributions in power electronics and integrated circuits." lead="A representative selection spanning journals and leading IEEE conferences. For the latest and complete record, consult Google Scholar, IEEE Xplore, or the official University of Macau profile." meta={['220+ technical papers', '175 IEEE Xplore records', '5 books']} />
+
+  <section class="stats" aria-label="Research impact">
+    <div class="container stats-grid">
+      <div class="stat"><strong>{scholarlyMetrics.scholar.citations}</strong><span>Google Scholar citations</span></div>
+      <div class="stat"><strong>{scholarlyMetrics.scholar.hIndex}</strong><span>Google Scholar h-index</span></div>
+      <div class="stat"><strong>{scholarlyMetrics.scholar.i10Index}</strong><span>Google Scholar i10-index</span></div>
+      <div class="stat"><strong>{scholarlyMetrics.ieee.publications}</strong><span>IEEE Xplore records</span></div>
+    </div>
+    <p class="container metrics-note">Profile metrics retrieved {scholarlyMetrics.retrieved}. Citation counts are dynamic and differ across databases.</p>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Research impact</p>
+        <div><h2>Highly cited work</h2><p>Selected papers with the highest citation counts shown on the public Google Scholar profile at the retrieval date.</p></div>
+      </div>
+      <div class="publication-list">
+        {highlyCitedPublications.map((pub) => (
+          <article class="publication">
+            <span class="pub-year">{pub.year}</span>
+            <div><h2>{pub.title}</h2><p>{pub.authors}</p><p><em>{pub.venue}</em></p></div>
+            <span class="pub-type">{pub.citations} citations</span>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section white">
+    <div class="container">
+      <div class="section-head"><p class="eyebrow">Recent work</p><div><h2>Selected publications</h2><p>Recent journal and conference contributions across integrated circuits, power conversion, control, and wireless energy transfer.</p></div></div>
+      <div class="publication-list">
+        {selectedPublications.map((pub) => (
+          <article class="publication">
+            <span class="pub-year">{pub.year}</span>
+            <div><h2>{pub.title}</h2><p>{pub.authors}</p><p><em>{pub.venue}</em></p></div>
+            <span class="pub-type">{pub.type}</span>
+          </article>
+        ))}
+      </div>
+      <div class="profile-links">
+        <a class="button" href={profile.googleScholar} target="_blank" rel="noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
+        <a class="button secondary" href={profile.ieeeXplore} target="_blank" rel="noreferrer">IEEE Xplore <span aria-hidden="true">↗</span></a>
+        <a class="button secondary" href={profile.orcid} target="_blank" rel="noreferrer">ORCID <span aria-hidden="true">↗</span></a>
+        <a class="button secondary" href={profile.officialProfile} target="_blank" rel="noreferrer">Official UM profile <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

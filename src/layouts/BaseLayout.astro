@@ -1,0 +1,46 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Chi-Seng Lam | University of Macau',
+  description = 'Academic website of Professor Chi-Seng Lam at the University of Macau: power electronics, power management integrated circuits, power quality, renewable energy, and wireless power transfer.'
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const portrait = new URL(`${import.meta.env.BASE_URL}images/chi-seng-lam.jpg`, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0d2238" />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={portrait} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={portrait} />
+    <link rel="icon" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a href="#main" style="position:absolute;left:-9999px;top:10px;z-index:100;background:white;padding:10px;" onfocus="this.style.left='10px'" onblur="this.style.left='-9999px'">Skip to content</a>
+    <Header />
+    <main id="main"><slot /></main>
+    <Footer />
+  </body>
+</html>

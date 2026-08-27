@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+
+const levels = [
+  {
+    level: 'Undergraduate',
+    courses: [
+      ['ECEN1003 / ECEB120', 'Information Technology Revolution and Electronics'],
+      ['ECEB321', 'ECE Seminar'],
+      ['ECEN4000 / ECEB410', 'Design Project I'],
+      ['ECEN4001 / ECEB420', 'Design Project II'],
+      ['SUMR001', 'Summer Research Programme for Undergraduate Students']
+    ]
+  },
+  {
+    level: 'Master’s',
+    courses: [
+      ['ECEN7018 / IMEL7004', 'Flexible Alternative Current Transmission System'],
+      ['ECEN7001 / ELCE701', 'Introduction to Research'],
+      ['ECEN7999 / ELCE798', 'Academic Thesis']
+    ]
+  },
+  {
+    level: 'Doctoral',
+    courses: [
+      ['ECEN8001', 'Advanced Topics in Electrical and Computer Engineering'],
+      ['ECEN8999 / ELCE899', 'Doctoral Thesis']
+    ]
+  }
+];
+---
+
+<BaseLayout title="Teaching | Chi-Seng Lam" description="Courses and research training taught by Professor Chi-Seng Lam at the University of Macau.">
+  <PageHero eyebrow="Teaching" title="Engineering education grounded in design and research." lead="Teaching spans foundational electronics, system design, flexible AC transmission, research methods, and thesis supervision from undergraduate to doctoral level." />
+  <section class="section white">
+    <div class="container">
+      {levels.map((group) => (
+        <section style="margin-bottom:70px">
+          <div class="section-head" style="margin-bottom:25px"><p class="eyebrow">{group.level}</p><h2 style="font-size:clamp(2rem,4vw,3rem)">{group.level} courses</h2></div>
+          <ul class="clean-list">
+            {group.courses.map(([code, title]) => <li><strong>{title}</strong><small>{code}</small></li>)}
+          </ul>
+        </section>
+      ))}
+    </div>
+  </section>
+  <section class="section">
+    <div class="container quote-panel">
+      <blockquote>Research training begins with a clear question, sound fundamentals, and evidence that can withstand scrutiny.</blockquote>
+      <p>Teaching and supervision connect theory to prototypes, measurement, and precise scholarly communication.</p>
+    </div>
+  </section>
+</BaseLayout>

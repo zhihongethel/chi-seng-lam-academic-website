@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="People | Chi-Seng Lam Research Group" description="Research group and mentorship information for Professor Chi-Seng Lam at the University of Macau.">
+  <PageHero eyebrow="People" title="A research culture built on depth, independence, and collaboration." lead="The group brings together researchers working across integrated circuits, power conversion, control, and energy systems at the University of Macau." />
+
+  <section class="section white">
+    <div class="container bio-grid">
+      <div>
+        <p class="eyebrow">Principal investigator</p>
+        <h2 style="margin:0 0 20px;font-family:var(--serif);font-size:clamp(2.6rem,5vw,4.4rem);font-weight:400;line-height:1">Chi-Seng Lam <span lang="zh-Hant">林智聲</span></h2>
+        <p class="lead">Full Professor, State Key Laboratory of Analog and Mixed-Signal VLSI; Institute of Microelectronics; and Department of Electrical and Computer Engineering.</p>
+        <p>Professor Lam supervises work that bridges power electronic circuits, integrated power management, renewable generation, and wireless power transfer. His mentoring emphasizes strong fundamentals, careful experimentation, and research that can move from a paper to a working system.</p>
+      </div>
+      <img src={`${base}images/chi-seng-lam.jpg`} alt="Professor Chi-Seng Lam" width="1320" height="1616" style="aspect-ratio:4/5;object-fit:cover;object-position:50% 14%" />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><p class="eyebrow">Group</p><div><h2>Researchers at different stages, one shared standard.</h2><p>Current group membership should be confirmed with Professor Lam before names and individual profiles are published. The site is structured to add those profiles cleanly when approved.</p></div></div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="kicker">Doctoral researchers</span><h3>Original contributions</h3><p>Deep research programmes in converter architectures, control, power quality, PMICs, and wireless power.</p></article>
+        <article class="feature-card"><span class="kicker">Master’s & research assistants</span><h3>Focused investigation</h3><p>Well-defined projects that combine analysis, implementation, and disciplined technical communication.</p></article>
+        <article class="feature-card"><span class="kicker">Postdoctoral scholars</span><h3>Research leadership</h3><p>Independent scholarship, project leadership, mentoring, and collaboration across disciplines.</p></article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
