@@ -731,8 +731,8 @@ export const legacy = {
     {
       "caption": "Research Team Members at the State Key Laboratory of Analog and Mixed-Signal VLSI (AMSV), University of Macau",
       "images": [
-        "images/legacy/team/research-team-01.jpg",
-        "images/legacy/team/research-team-02.jpg"
+        "images/legacy/team/research-team-01-hd.jpg",
+        "images/legacy/team/research-team-02-hd.jpg"
       ]
     }
   ],
