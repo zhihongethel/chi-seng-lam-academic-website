@@ -26,6 +26,20 @@ const bachelorMoments = [
   { caption: legacy.graduations.bachelors[1], images: ['images/legacy/graduation/class-graduation-photo-2014-2015-2018-03-18.jpg'] },
   { caption: legacy.graduations.bachelors[2], images: ['images/legacy/graduation/class-graduation-photo-2015-2016-2019-03-10.jpg'] }
 ];
+
+const traineeLabels: Record<string, string> = {
+  postdoctoral: 'Postdoctoral',
+  researchAssistants: 'Research Assistants',
+  phd: 'PhD',
+  masters: 'Masters',
+  bachelors: 'Bachelors'
+};
+
+const graduationGroups = [
+  { title: 'PhD Oral Defence', moments: phdMoments },
+  { title: 'Master Oral Defence', moments: masterMoments },
+  { title: 'Bachelor Graduation', moments: bachelorMoments }
+];
 ---
 
 <BaseLayout title="People | Chi-Seng Lam Research Group" description="Research group and mentorship information for Professor Chi-Seng Lam at the University of Macau.">
@@ -57,19 +71,17 @@ const bachelorMoments = [
     <div class="container">
       <div class="section-head"><p class="eyebrow">Research team</p><div><h2>The people behind the research.</h2></div></div>
       <div class="moments-grid">
-        {legacy.researchTeamMembers.map((member) => (
-          <article class="moment-card">
-            <span class="kicker">Research team members</span>
-            <div class="moment-photos">
-              {member.images.map((img) => (
-                <figure class="moment-photo">
-                  <img src={linkTo(img)} alt={member.caption} loading="lazy" decoding="async" />
-                </figure>
-              ))}
-            </div>
-            <p class="moment-caption">{member.caption}</p>
-          </article>
-        ))}
+        {legacy.researchTeamMembers.flatMap((member) =>
+          member.images.map((img) => (
+            <article class="moment-card">
+              <span class="kicker">Research Team Members</span>
+              <figure class="moment-photo">
+                <img src={linkTo(img)} alt={member.caption} loading="lazy" decoding="async" />
+              </figure>
+              <p class="moment-caption">{member.caption}</p>
+            </article>
+          ))
+        )}
       </div>
     </div>
   </section>
@@ -79,7 +91,7 @@ const bachelorMoments = [
       <div class="section-head"><p class="eyebrow">Mentorship</p><div><h2>Students and researchers.</h2></div></div>
       {Object.entries(legacy.trainees).map(([level, people]) => (
         <details class="archive-details">
-          <summary><span>{level.replace(/([A-Z])/g, ' $1')}</span><strong>{people.length}</strong></summary>
+          <summary><span>{traineeLabels[level] ?? level}</span><strong>{people.length}</strong></summary>
           <ul class="archive-list">{people.map((person) => <li>{person}</li>)}</ul>
         </details>
       ))}
@@ -89,39 +101,23 @@ const bachelorMoments = [
   <section class="section legacy-section">
     <div class="container">
       <div class="section-head"><p class="eyebrow">Milestones</p><div><h2>Graduation moments.</h2></div></div>
-      <div class="moments-grid">
-        {phdMoments.map((moment) => (
-          <article class="moment-card">
-            <span class="kicker">PhD oral defence</span>
-            <div class={moment.images.length > 1 ? 'moment-photos' : 'moment-photo'}>
-              {moment.images.map((img) => (
-                <figure class="moment-photo">
-                  <img src={linkTo(img)} alt={moment.caption} loading="lazy" decoding="async" />
-                </figure>
-              ))}
-            </div>
-            <p class="moment-caption">{moment.caption}</p>
-          </article>
-        ))}
-        {masterMoments.map((moment) => (
-          <article class="moment-card">
-            <span class="kicker">Master oral defence</span>
-            <div class="moment-photo">
-              <img src={linkTo(moment.images[0])} alt={moment.caption} loading="lazy" decoding="async" />
-            </div>
-            <p class="moment-caption">{moment.caption}</p>
-          </article>
-        ))}
-        {bachelorMoments.map((moment) => (
-          <article class="moment-card">
-            <span class="kicker">Bachelor graduation</span>
-            <div class="moment-photo">
-              <img src={linkTo(moment.images[0])} alt={moment.caption} loading="lazy" decoding="async" />
-            </div>
-            <p class="moment-caption">{moment.caption}</p>
-          </article>
-        ))}
-      </div>
+      {graduationGroups.map((group) => (
+        <section class="graduation-group" aria-labelledby={`graduation-${group.title.toLowerCase().replace(/\s+/g, '-')}`}>
+          <h3 id={`graduation-${group.title.toLowerCase().replace(/\s+/g, '-')}`} class="graduation-group-title">{group.title}</h3>
+          <div class="moments-grid">
+            {group.moments.flatMap((moment) =>
+              moment.images.map((img) => (
+                <article class="moment-card">
+                  <div class="moment-photo">
+                    <img src={linkTo(img)} alt={moment.caption} loading="lazy" decoding="async" />
+                  </div>
+                  <p class="moment-caption">{moment.caption}</p>
+                </article>
+              ))
+            )}
+          </div>
+        </section>
+      ))}
     </div>
   </section>
 
