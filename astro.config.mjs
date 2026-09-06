@@ -7,6 +7,11 @@ export default defineConfig({
   base,
   output: 'static',
   trailingSlash: 'always',
+  vite: {
+    server: {
+      allowedHosts: ['.lhr.life']
+    }
+  },
   build: {
     format: 'directory'
   }

@@ -1,31 +1,149 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
+import { legacy } from '../data/legacy';
 const base = import.meta.env.BASE_URL;
+const linkTo = (href: string) => `${base}${href}`.replace(/\/+/g, '/');
+
+const phdMoments = [
+  { caption: legacy.graduations.phd[0], images: ['images/legacy/graduation/wen-liang-zeng-phd-oral-defense-2020-07-08.jpg', 'images/legacy/graduation/wen-liang-zeng-phd-oral-defense-2020-07-08-02.jpg'] },
+  { caption: legacy.graduations.phd[1], images: ['images/legacy/graduation/lei-wang-phd-oral-defense-2016-12-12.jpg', 'images/legacy/graduation/lei-wang-phd-oral-defense-2016-12-12-02.jpg'] }
+];
+
+const masterMoments = [
+  { caption: legacy.graduations.masters[0], images: ['images/legacy/graduation/chi-wa-chao-master-oral-defense-2020-12-11.jpg'] },
+  { caption: legacy.graduations.masters[1], images: ['images/legacy/graduation/zi-yang-lin-master-oral-defense-2019-11-18.jpg'] },
+  { caption: legacy.graduations.masters[2], images: ['images/legacy/graduation/wen-ming-zheng-master-oral-defense-2018-12-11.jpg'] },
+  { caption: legacy.graduations.masters[3], images: ['images/legacy/graduation/jianyang-deng-master-oral-defense-2019-07-09.jpg'] },
+  { caption: legacy.graduations.masters[4], images: ['images/legacy/graduation/yuan-ren-master-oral-defense-2016-12-28.jpg'] },
+  { caption: legacy.graduations.masters[5], images: ['images/legacy/graduation/yi-wei-tan-master-oral-defense-2017-12-15.jpg'] },
+  { caption: legacy.graduations.masters[6], images: ['images/legacy/graduation/wen-liang-zeng-master-oral-defense-2016-06-23.jpg'] },
+  { caption: legacy.graduations.masters[7], images: ['images/legacy/graduation/sut-ian-ho-master-oral-defense-2016-07-28.jpg'] }
+];
+
+const bachelorMoments = [
+  { caption: legacy.graduations.bachelors[0], images: ['images/legacy/graduation/class-graduation-photo-2016-2017-2020-07-03.jpg'] },
+  { caption: legacy.graduations.bachelors[1], images: ['images/legacy/graduation/class-graduation-photo-2014-2015-2018-03-18.jpg'] },
+  { caption: legacy.graduations.bachelors[2], images: ['images/legacy/graduation/class-graduation-photo-2015-2016-2019-03-10.jpg'] }
+];
 ---
 
 <BaseLayout title="People | Chi-Seng Lam Research Group" description="Research group and mentorship information for Professor Chi-Seng Lam at the University of Macau.">
   <PageHero eyebrow="People" title="A research culture built on depth, independence, and collaboration." lead="The group brings together researchers working across integrated circuits, power conversion, control, and energy systems at the University of Macau." />
 
   <section class="section white">
-    <div class="container bio-grid">
-      <div>
+    <div class="container">
+      <div class="principal-copy">
         <p class="eyebrow">Principal investigator</p>
         <h2 style="margin:0 0 20px;font-family:var(--serif);font-size:clamp(2.6rem,5vw,4.4rem);font-weight:400;line-height:1">Chi-Seng Lam <span lang="zh-Hant">林智聲</span></h2>
         <p class="lead">Full Professor, State Key Laboratory of Analog and Mixed-Signal VLSI; Institute of Microelectronics; and Department of Electrical and Computer Engineering.</p>
         <p>Professor Lam supervises work that bridges power electronic circuits, integrated power management, renewable generation, and wireless power transfer. His mentoring emphasizes strong fundamentals, careful experimentation, and research that can move from a paper to a working system.</p>
       </div>
-      <img src={`${base}images/chi-seng-lam.jpg`} alt="Professor Chi-Seng Lam" width="1320" height="1616" style="aspect-ratio:4/5;object-fit:cover;object-position:50% 14%" />
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="section-head"><p class="eyebrow">Group</p><div><h2>Researchers at different stages, one shared standard.</h2><p>Current group membership should be confirmed with Professor Lam before names and individual profiles are published. The site is structured to add those profiles cleanly when approved.</p></div></div>
+      <div class="section-head"><p class="eyebrow">Group</p><div><h2>Researchers at different stages, one shared standard.</h2></div></div>
       <div class="feature-grid">
         <article class="feature-card"><span class="kicker">Doctoral researchers</span><h3>Original contributions</h3><p>Deep research programmes in converter architectures, control, power quality, PMICs, and wireless power.</p></article>
         <article class="feature-card"><span class="kicker">Master’s & research assistants</span><h3>Focused investigation</h3><p>Well-defined projects that combine analysis, implementation, and disciplined technical communication.</p></article>
         <article class="feature-card"><span class="kicker">Postdoctoral scholars</span><h3>Research leadership</h3><p>Independent scholarship, project leadership, mentoring, and collaboration across disciplines.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><p class="eyebrow">Research team</p><div><h2>The people behind the research.</h2></div></div>
+      <div class="moments-grid">
+        {legacy.researchTeamMembers.map((member) => (
+          <article class="moment-card">
+            <span class="kicker">Research team members</span>
+            <div class="moment-photos">
+              {member.images.map((img) => (
+                <figure class="moment-photo">
+                  <img src={linkTo(img)} alt={member.caption} loading="lazy" decoding="async" />
+                </figure>
+              ))}
+            </div>
+            <p class="moment-caption">{member.caption}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section white">
+    <div class="container">
+      <div class="section-head"><p class="eyebrow">Mentorship</p><div><h2>Students and researchers.</h2></div></div>
+      {Object.entries(legacy.trainees).map(([level, people]) => (
+        <details class="archive-details">
+          <summary><span>{level.replace(/([A-Z])/g, ' $1')}</span><strong>{people.length}</strong></summary>
+          <ul class="archive-list">{people.map((person) => <li>{person}</li>)}</ul>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="section legacy-section">
+    <div class="container">
+      <div class="section-head"><p class="eyebrow">Milestones</p><div><h2>Graduation moments.</h2></div></div>
+      <div class="moments-grid">
+        {phdMoments.map((moment) => (
+          <article class="moment-card">
+            <span class="kicker">PhD oral defence</span>
+            <div class={moment.images.length > 1 ? 'moment-photos' : 'moment-photo'}>
+              {moment.images.map((img) => (
+                <figure class="moment-photo">
+                  <img src={linkTo(img)} alt={moment.caption} loading="lazy" decoding="async" />
+                </figure>
+              ))}
+            </div>
+            <p class="moment-caption">{moment.caption}</p>
+          </article>
+        ))}
+        {masterMoments.map((moment) => (
+          <article class="moment-card">
+            <span class="kicker">Master oral defence</span>
+            <div class="moment-photo">
+              <img src={linkTo(moment.images[0])} alt={moment.caption} loading="lazy" decoding="async" />
+            </div>
+            <p class="moment-caption">{moment.caption}</p>
+          </article>
+        ))}
+        {bachelorMoments.map((moment) => (
+          <article class="moment-card">
+            <span class="kicker">Bachelor graduation</span>
+            <div class="moment-photo">
+              <img src={linkTo(moment.images[0])} alt={moment.caption} loading="lazy" decoding="async" />
+            </div>
+            <p class="moment-caption">{moment.caption}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section white">
+    <div class="container">
+      <div class="section-head"><p class="eyebrow">Group life</p><div><h2>Team activities.</h2><p>Gatherings, sports, outreach, and service activities recorded by the group between 2018 and 2021.</p></div></div>
+      <div class="moments-grid">
+        {legacy.teamActivities.map((activity) => (
+          <article class={activity.images.length > 2 ? 'moment-card wide' : 'moment-card'}>
+            <span class="kicker">{activity.kicker}</span>
+            {activity.images.length > 0 && (
+              <div class={activity.images.length > 2 ? 'activity-photos' : activity.images.length > 1 ? 'moment-photos' : 'moment-photo'}>
+                {activity.images.map((img) => (
+                  <figure class="moment-photo">
+                    <img src={linkTo(img)} alt={activity.caption} loading="lazy" decoding="async" />
+                  </figure>
+                ))}
+              </div>
+            )}
+            <p class="moment-caption">{activity.caption}</p>
+          </article>
+        ))}
       </div>
     </div>
   </section>

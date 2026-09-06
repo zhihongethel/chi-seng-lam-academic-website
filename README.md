@@ -12,6 +12,8 @@ A modern, restrained academic website for Professor Chi-Seng Lam at the Universi
 - Awards & Service
 - Openings / Contact
 
+The former Google Sites material is reorganized into these seven pages: qualifications and work history are on Home; student supervision, graduation records, and team activities are under People; projects are under Research; the complete historical bibliography is under Publications; courses are under Teaching; awards, seminars, and technical talks are under Awards & Service; and recruitment plus contact details are under Openings / Contact. The current package is intentionally text-first; historical gallery images can be added later as local files.
+
 ## Run locally
 
 Requirements: Node.js 20 or newer.

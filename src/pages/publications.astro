@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import { highlyCitedPublications, profile, scholarlyMetrics, selectedPublications } from '../data/site';
+import { legacy } from '../data/legacy';
 ---
 
 <BaseLayout title="Publications | Chi-Seng Lam" description="Selected publications by Professor Chi-Seng Lam in power electronics, integrated circuits, renewable energy, and wireless power transfer.">
@@ -53,6 +54,28 @@ import { highlyCitedPublications, profile, scholarlyMetrics, selectedPublication
         <a class="button secondary" href={profile.orcid} target="_blank" rel="noreferrer">ORCID <span aria-hidden="true">↗</span></a>
         <a class="button secondary" href={profile.officialProfile} target="_blank" rel="noreferrer">Official UM profile <span aria-hidden="true">↗</span></a>
       </div>
+    </div>
+  </section>
+
+  <section class="section legacy-section">
+    <div class="container">
+      <div class="section-head"><p class="eyebrow">Complete record</p><div><h2>Publications.</h2></div></div>
+      <details class="archive-details" open>
+        <summary><span>Patents</span><strong>{legacy.patents.length}</strong></summary>
+        <ol class="archive-list numbered-archive">{legacy.patents.map((item) => <li>{item}</li>)}</ol>
+      </details>
+      <details class="archive-details" open>
+        <summary><span>Books & book chapters</span><strong>{legacy.booksAndChapters.length}</strong></summary>
+        <ol class="archive-list numbered-archive">{legacy.booksAndChapters.map((item) => <li>{item}</li>)}</ol>
+      </details>
+      <details class="archive-details">
+        <summary><span>Journal papers</span><strong>{legacy.legacyJournals.length}</strong></summary>
+        <ol class="archive-list numbered-archive">{legacy.legacyJournals.map((item) => <li>{item}</li>)}</ol>
+      </details>
+      <details class="archive-details">
+        <summary><span>Conference papers</span><strong>{legacy.legacyConferences.length}</strong></summary>
+        <ol class="archive-list numbered-archive">{legacy.legacyConferences.map((item) => <li>{item}</li>)}</ol>
+      </details>
     </div>
   </section>
 </BaseLayout>

@@ -2,6 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import { awards, editorialRoles, reviewerAwards } from '../data/site';
+import { legacy } from '../data/legacy';
+const base = import.meta.env.BASE_URL;
+const linkTo = (href: string) => `${base}${href}`.replace(/\/+/g, '/');
 ---
 
 <BaseLayout title="Awards & Service | Chi-Seng Lam" description="Awards, editorial appointments, and IEEE professional service of Professor Chi-Seng Lam at the University of Macau.">
@@ -44,6 +47,68 @@ import { awards, editorialRoles, reviewerAwards } from '../data/site';
         <h2 class="subhead">Editorial awards</h2>
         <ul class="clean-list">{reviewerAwards.map((award) => <li>{award}</li>)}</ul>
         <p style="margin-top:32px;color:var(--muted)">Professor Lam has also delivered seven tutorials at IEEE conferences including IECON, IPEMC-ECCE Asia, PEDG, ISCAS, and APPEEC.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section white">
+    <div class="container">
+      <div class="section-head"><p class="eyebrow">Honours</p><div><h2>Awards and honours.</h2></div></div>
+      <details class="archive-details" open>
+        <summary><span>Academic awards & honours</span><strong>{legacy.academicAwards.length}</strong></summary>
+        <ol class="archive-list numbered-archive">{legacy.academicAwards.map((item) => <li>{item}</li>)}</ol>
+      </details>
+      <details class="archive-details">
+        <summary><span>Student awards under supervision / advisory</span><strong>{legacy.studentAwards.length}</strong></summary>
+        <ol class="archive-list numbered-archive">{legacy.studentAwards.map((item) => <li>{item}</li>)}</ol>
+      </details>
+      <div class="award-moments">
+        <p class="eyebrow" style="margin-top:38px">Award moments</p>
+        <div class="moments-grid">
+          {legacy.awardMoments.map((item) => (
+            <figure class="moment-card">
+              <div class="moment-photo"><img src={linkTo(item.img)} alt={item.caption} loading="lazy" decoding="async" /></div>
+              <figcaption class="moment-caption">{item.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section legacy-section">
+    <div class="container">
+      <div class="section-head"><p class="eyebrow">Knowledge exchange</p><div><h2>Seminars and technical talks.</h2><p>Invited seminars hosted by the group and outreach, tutorial, and demonstration activity from 2014–2021, with photo highlights from each visit.</p></div></div>
+      <div class="talk-group">
+        <h3 class="subhead">Hosted seminars</h3>
+        {legacy.seminarEvents.map((item, i) => (
+          <details class="talk-card" open={i === 0 ? true : undefined}>
+            <summary>
+              <span class="talk-date">{item.date}</span>
+              <span class="talk-summary-text">
+                <strong>{item.title}</strong>
+                <span class="talk-speaker">{item.speaker}</span>
+              </span>
+            </summary>
+            <div class="talk-photos">
+              {item.images.map((img) => <img src={linkTo(img)} alt={item.title} loading="lazy" decoding="async" />)}
+            </div>
+          </details>
+        ))}
+      </div>
+      <div class="talk-group">
+        <h3 class="subhead">Technical talks &amp; demonstrations</h3>
+        {legacy.talkEvents.map((item) => (
+          <details class="talk-card">
+            <summary>
+              <span class="talk-date">{item.date}</span>
+              <span class="talk-summary-text"><strong>{item.title}</strong></span>
+            </summary>
+            <div class="talk-photos">
+              {item.images.map((img) => <img src={linkTo(img)} alt={item.title} loading="lazy" decoding="async" />)}
+            </div>
+          </details>
+        ))}
       </div>
     </div>
   </section>
