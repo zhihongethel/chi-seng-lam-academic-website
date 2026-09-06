@@ -58,7 +58,7 @@ const linkTo = (href: string) => `${base}${href}`.replace(/\/+/g, '/');
     <div class="container">
       <div class="section-head">
         <p class="eyebrow">Background</p>
-        <div><h2>Education and professional journey.</h2><p>Historical academic qualifications and appointments migrated from Professor Lam’s former public homepage, updated here to retain his current Full Professor title.</p></div>
+        <div><h2>Education and professional journey.</h2></div>
       </div>
       <div class="two-col archive-columns">
         <div>
@@ -80,12 +80,8 @@ const linkTo = (href: string) => `${base}${href}`.replace(/\/+/g, '/');
 
   <section class="section white">
     <div class="container">
-      <div class="section-head"><p class="eyebrow">Archive · 2020–2021</p><div><h2>Research-group news.</h2><p>Milestones preserved from the former homepage. These entries are historical and are not presented as current announcements.</p></div></div>
+      <div class="section-head"><p class="eyebrow">News</p><div><h2>Research-group news.</h2></div></div>
       <ul class="archive-list two-column-list">{legacy.legacyNews.map((item) => <li>{item}</li>)}</ul>
-      <details class="archive-details">
-        <summary>Biography from the former homepage</summary>
-        <div class="archive-prose">{legacy.archivedBiography.map((paragraph) => <p>{paragraph}</p>)}</div>
-      </details>
     </div>
   </section>
 
@@ -93,7 +89,7 @@ const linkTo = (href: string) => `${base}${href}`.replace(/\/+/g, '/');
     <div class="container">
       <div class="section-head">
         <p class="eyebrow">Research focus</p>
-        <div><h2>Power conversion across scales.</h2><p>From low-power integrated converters to grid-scale compensation, the group studies architectures and control methods that make electrical energy cleaner, more efficient, and more adaptable.</p></div>
+        <div><h2>Power conversion across scales.</h2></div>
       </div>
       <div class="research-list">
         {researchAreas.map((area) => (
@@ -111,7 +107,7 @@ const linkTo = (href: string) => `${base}${href}`.replace(/\/+/g, '/');
     <div class="container">
       <div class="section-head">
         <p class="eyebrow">Selected work</p>
-        <div><h2>Recent publications</h2><p>Selected journal and conference work in power conversion, integrated circuits, smart grids, and wireless charging.</p></div>
+        <div><h2>Recent publications</h2></div>
       </div>
       <div class="publication-list">
         {selectedPublications.slice(0, 4).map((pub) => (

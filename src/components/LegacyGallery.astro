@@ -6,24 +6,24 @@ interface Props {
   caption?: string;
 }
 
-const { title, images, sourceUrl, caption = 'Photographs from the former research-group website.' } = Astro.props;
+const { title, images, sourceUrl, caption = 'Photographs from the research group.' } = Astro.props;
 ---
 
 <section class="legacy-gallery" aria-labelledby={`${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-gallery`}>
   <div class="gallery-heading">
     <div>
-      <p class="eyebrow">Historical gallery</p>
+      <p class="eyebrow">Gallery</p>
       <h2 id={`${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-gallery`}>{title}</h2>
       <p>{caption}</p>
     </div>
-    <a class="text-link" href={sourceUrl} target="_blank" rel="noreferrer">View original archive <span aria-hidden="true">↗</span></a>
+    <a class="text-link" href={sourceUrl} target="_blank" rel="noreferrer">View gallery <span aria-hidden="true">↗</span></a>
   </div>
   <div class="photo-grid">
     {images.map((src, index) => (
       <figure class="archive-photo">
         <img
           src={src}
-          alt={`${title} archive photograph ${index + 1}`}
+          alt={`${title} photograph ${index + 1}`}
           loading="lazy"
           decoding="async"
           referrerpolicy="no-referrer"

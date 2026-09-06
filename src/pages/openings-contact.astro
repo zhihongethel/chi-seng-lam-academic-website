@@ -21,7 +21,7 @@ const linkTo = (href: string) => `${base}${href}`.replace(/\/+/g, '/');
           <li><strong>Integrated circuits</strong><small>Power management ICs, DC–DC converters, and voltage references</small></li>
           <li><strong>Energy applications</strong><small>Photovoltaics, wireless power transfer, and smart grids</small></li>
         </ul>
-        <h3 class="subhead funding-heading">Funding information preserved from the former site</h3>
+        <h3 class="subhead funding-heading">Funding information</h3>
         <ul class="archive-list">
           {legacy.fundingLinks.map(([label, href]) => {
             const banner = label.includes('Postdoctoral')
@@ -37,7 +37,6 @@ const linkTo = (href: string) => `${base}${href}`.replace(/\/+/g, '/');
             );
           })}
         </ul>
-        <p class="archive-note">Programme names and URLs may have changed. Verify eligibility, deadlines, and current terms on the official University of Macau website before applying.</p>
       </div>
       <div class="contact-card">
         <h2 class="subhead">Get in touch</h2>
@@ -52,16 +51,4 @@ const linkTo = (href: string) => `${base}${href}`.replace(/\/+/g, '/');
     </div>
   </section>
 
-  <section class="section">
-    <div class="container quote-panel">
-      <blockquote>Strong fundamentals, intellectual curiosity, and the patience to make ideas work in hardware.</blockquote>
-      <p>Prospective researchers are encouraged to explain what they have built or studied and how it connects with the group’s current directions.</p>
-    </div>
-  </section>
-
-  <section class="section white">
-    <div class="container">
-      <p class="archive-note">Historical contact details have been preserved from the former public site. Applicants should verify time-sensitive programme information through the official University of Macau pages.</p>
-    </div>
-  </section>
 </BaseLayout>
