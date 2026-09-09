@@ -736,24 +736,141 @@ export const legacy = {
       ]
     }
   ],
-  "awardMoments": [
+  "academicAwardGalleryRows": [
+    [
+      "images/legacy/awards/award-gallery-27.jpg",
+      "images/legacy/awards/award-gallery-30.jpg"
+    ],
+    [
+      "images/legacy/awards/academic-appeec-2019-tutorial-podium.jpg",
+      "images/legacy/awards/academic-appeec-2019-banquet.jpg"
+    ],
+    [
+      "images/legacy/awards/academic-mst-2018-diploma-cover.jpg",
+      "images/legacy/awards/academic-mst-2018-certificate.jpg",
+      "images/legacy/awards/academic-mst-2014-diploma-cover.png",
+      "images/legacy/awards/academic-mst-2014-certificate.png"
+    ],
+    [
+      "images/legacy/awards/academic-pes-outstanding-engineer-plaque.jpg",
+      "images/legacy/awards/academic-mst-2012-phd-rd-certificate.jpg",
+      "images/legacy/awards/academic-icta-2019-best-paper.jpg"
+    ]
+  ],
+  "studentAwardGallery": [
     {
-      "caption": "Wen-Liang Zeng won 2020 Young Research Award, International Institute of Macau, Macao, China",
-      "img": "images/legacy/awards/wen-liang-zeng-young-research-award-2021.jpg"
+      "caption": "Wen-Liang Zheng won 2020 Young Research Award, International Institute of Macau, Macao, China",
+      "img": "images/legacy/awards/award-gallery-07.jpg"
     },
     {
-      "caption": "Wen-Liang Zeng interviewed by TDM Media",
-      "img": "images/legacy/awards/wen-liang-zeng-tdm-media-interview.jpg"
+      "caption": "Wen-Liang Zheng interviewed by TDM Media",
+      "img": "images/legacy/awards/award-gallery-09.jpg"
     },
     {
-      "caption": "Award ceremony at the State Key Laboratory of Analog and Mixed-Signal VLSI (AMSV), University of Macau",
-      "img": "images/legacy/awards/team-award-ceremony-amsv.jpg"
+      "caption": "Wen-Liang Zheng & Chi-Wa U won The Second Prize of South China District, The China Graduate Electronic Design Competition",
+      "img": "images/legacy/awards/award-gallery-13.jpg"
     },
     {
-      "caption": "Second Prize of South China District, The China Graduate Electronic Design Competition (honor certificate)",
-      "img": "images/legacy/awards/honor-certificate-zhihuicheng.jpg"
+      "caption": "The Second Prize of South China District, The China Graduate Electronic Design Competition",
+      "img": "images/legacy/awards/honor-certificate-south-china-2nd-prize.jpg"
+    },
+    {
+      "caption": "Io-Wa Iam & Iok-U Hoi won Champion of 2020 IEEE Macau Student Branch Project Competition & IEEE Macau IES 2020 Undergraduate Project Contest",
+      "img": "images/legacy/awards/award-gallery-08.jpg"
+    },
+    {
+      "caption": "Champion & Third Prize of 2019 IEEE Macau Student Branch Project Competition",
+      "img": "images/legacy/awards/award-gallery-04.jpg"
+    },
+    {
+      "caption": "Wai-Kit Sou won Champion of 2019 IEEE Macau Student Branch Project Competition",
+      "img": "images/legacy/awards/award-gallery-05.jpg"
+    },
+    {
+      "caption": "Chi-Wa U won Third Prize of 2019 IEEE Macau Student Branch Project Competition",
+      "img": "images/legacy/awards/award-gallery-06.jpg"
+    },
+    {
+      "caption": "Io-Wa Iam, Ka-Weng Lei & Iok-U Hoi won Practicability Award of 2019 IEEE Macau Student Branch Project Competition",
+      "img": "images/legacy/awards/award-gallery-11.jpg"
+    },
+    {
+      "caption": "Team Group Photo after 2019 IEEE Macau Student Branch Project Competition",
+      "img": "images/legacy/awards/team-photo-2019-ieee-macau-sb-competition.jpg"
+    },
+    {
+      "caption": "Chi-Wa U & Ka-Weng Lei received 2018/2019 UM Academic Prizes",
+      "img": "images/legacy/awards/award-gallery-12.jpg"
+    },
+    {
+      "caption": "Team Group Photo of 2018/2019 UM FST Dean List Project",
+      "img": "images/legacy/awards/team-photo-2018-2019-fst-dean-list-project.jpg"
+    },
+    {
+      "caption": "Chi-Wa U received 2018/2019 UM FST Dean List Project Certificate (Best Project of Depart. of ECE)",
+      "img": "images/legacy/awards/award-gallery-16.jpg"
+    },
+    {
+      "caption": "Wai-Kit Sou & Ka-Weng Lei received 2018/2019 UM FST Dean List Project Certificates",
+      "img": "images/legacy/awards/award-gallery-14.jpg"
+    },
+    {
+      "caption": "Chi-Wa Chao received 5 awards (IETHK Student Award, Champion of IEEE Macau Student Branch Project Competition, FST Dean List Project, Best Project of Depart. of ECE, IEEE Macau PES & PELS Joint Chapter Award) in 2018",
+      "img": "images/legacy/awards/award-gallery-19.jpg"
+    },
+    {
+      "caption": "Chi-Wa Chao (Left) & Mario Jose Leon Lao (Middle) received 2017/2018 UM FST Dean List Project Certificates",
+      "img": "images/legacy/awards/award-gallery-10.jpg"
+    },
+    {
+      "caption": "Haijie Wen received 1st Runner Up of 2017 IEEE Macau Student Branch Project Competition and 2017/2018 UM FST Dean List Project Certificate",
+      "img": "images/legacy/awards/award-gallery-20.jpg"
+    },
+    {
+      "caption": "Wen-Liang Zheng received 2016 Macao Postgraduate Scientific and Technological R&D Award",
+      "img": "images/legacy/awards/award-gallery-15.jpg"
+    },
+    {
+      "caption": "Wai-Hei Choi received 2014 Macao Postgraduate Scientific and Technological R&D Award",
+      "img": "images/legacy/awards/award-gallery-23.jpg"
+    },
+    {
+      "caption": "Wai-Hei Choi & Xiao-Xi Cui received 2nd Prize of 2012 5th National University Students Social Practice and Science Contest in Xian",
+      "img": "images/legacy/awards/award-gallery-21.jpg"
     }
   ],
+  "projectGallery": {
+    "lowPowerComposite": [
+      { "img": "images/legacy/projects/project-dcdc-pec-testbench.jpg" },
+      { "img": "images/legacy/projects/project-ic-testboard-socket.jpg" },
+      { "img": "images/legacy/projects/project-ky-dcdc-test-pcb.jpg" }
+    ],
+    "lowPowerICDesign": [
+      { "img": "images/legacy/projects/project-die-photo-01.jpg", "caption": "DC-DC Converter" },
+      { "img": "images/legacy/projects/project-die-photo-02.jpg", "caption": "DC-DC Converter" },
+      { "img": "images/legacy/projects/project-die-photo-03.jpg", "caption": "Power Electronics Controller" },
+      { "img": "images/legacy/projects/project-voltage-reference-die.jpg", "caption": "Voltage References" },
+      { "img": "images/legacy/projects/project-die-photo-05.png", "caption": "DC-DC Converter" },
+      { "img": "images/legacy/projects/project-die-photo-04.jpg", "caption": "DC-DC Converter" }
+    ],
+    "wirelessPowerTransfer": [
+      { "img": "images/legacy/projects/project-wpt-coil-system.png" },
+      { "img": "images/legacy/projects/project-wpt-gokart-coil.png" },
+      { "img": "images/legacy/projects/project-wpt-gokart-demo.jpg" }
+    ],
+    "qualityCompensatorsPV": [
+      { "img": "images/legacy/projects/project-compensator-cabinet-1.jpg" },
+      { "img": "images/legacy/projects/project-compensator-cabinet-2.jpg" },
+      { "img": "images/legacy/projects/project-compensator-cabinet-3.jpg" },
+      { "img": "images/legacy/projects/project-compensator-cabinet-4.jpg" },
+      { "img": "images/legacy/projects/project-compensator-cabinet-5.jpg" },
+      { "img": "images/legacy/projects/project-compensator-cabinet-6.jpg" }
+    ],
+    "industrializedCompensator": [
+      { "img": "images/legacy/projects/project-compensator-development-process.jpg" },
+      { "img": "images/legacy/projects/project-compensator-industrial-site.jpg" }
+    ]
+  },
   "contact": {
     "office": "Room 3012e, Research Building N21, 3/F, University of Macau, Avenida da Universidade, Taipa, Macau, China",
     "telephone": "(853) 8822 4417",
@@ -769,37 +886,37 @@ export const legacy = {
       "https://lh3.googleusercontent.com/sitesv/AG8ngQUQsa4LoXhN33eYQAt4JbVPx5d6G_Dmh5CIYv5n6j0nbvrABPadiMSJlELZ2xdtGr01dAkK-33N_zk7pWXEWzJDVBqBTGbbOR4MmrKimfGHYF08Cepfppv8x5hfpiBBr9VvU1QgTkVrp4LgnhKCLHy5S4NW-a2ZbDzd9BgLDihY-4IQ1i_ktEYORHEb50vwU-2U2qtOl2-EhyrJ=w1280"
     ],
     "awards": [
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQXGhrmiVZxKDEKlUeNt6dQAEh1F1vZmw3VCR6ToPFztKCcrybcjqaBgWXk-fDi78KbbQR4qYecfrxpLEmjxGJBauHW0vZG_ggy9iG3XdvswKEBMo2CRKY0Vn3GQ9lsNFWfvLGpN9wGTY7pTXqRKCDsz_dmsRIIFFEEoelobwjmfPD6xxF1mYMOeTfHfPVsTJTySK1hiFm_wPF7U-NU=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQUAniFkZlquveNkBGBrfFZZdwEZFDsNsFt2li4FZl8FtoHOu0GUwv9HxvfSV7_W_HcxNvozY0So_IYXwB-uuIFASYcGoauvGzYH2jJ1RYQXlLFVy69YKmFISL8K4pgB64GGTs3cLHj1cV6GC9esQW86M8FeUKL4w0iE0qXlmsK_jjfkHxs1_vr4-WiRER85Js24QMO7BwOy06sAFXM=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQW4REjYoGomjDMg25r0XLtH1z9cfTUtnDHp5Bm5O-wPcljUwsAUC9YWZ9p0qt30W3mH1HA0mmzlvzJ6pNWebVIXbGa_GhK0QNjIKpCZTQ7tbiZhSy4ZT9ototeDxPP_XCKvNW3WE-B675mG3sg6FoIoHrwmAOEtakkUbwU5f0cq9cksU0F0etbucVyb-GQCLz-onBwmOGEqy45v=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQWwaaS_pQiSJP8sxT_GCM9wGRi9joGqxSlBmofY_Gj69KGeyPTnyUb1jde1j0IOc8xNbbrsPyYk_Abiv46gY0LP_0CLw6goJUqCBSWoquA7UbmG6bZhs52g6GI8g-9MsgR942D_gpyQMBcmnZ9TIpL47jS4v_juOnOyDFn3JkjyMHK581tKejOATf-yqN7jqCi2zRNIVrKyeIL_qXw=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQVLJrWiOwD8zYiMHxL79UmEgeaBzCcYF-BS9b5RiaF1q7rwaamss_o8Oi-nnHOuQD-8RZdojY5ee6558DAWMILHRl4__xFSzByjWzvHljQp5IvoJwosAbIrpxOgnGBslOcLf9ZZE0o98clYsnEfvJ2JVhuvhWkJUAWmC88Zjb0HBNc7_PzAsWNnPlRpEMzFithniR33jN1-U-U3U5A=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQV_T_TNn6NbtzjKLf5Q-SktDSuEMadtDbYu-o7I9EjGI3A_Y91PDnWV3F96DLRtF6Y3i28wxRufDPwzTDObOc6ql6EVTtYKLhJ-wutyZ0FCgW3bxTjKN87Cyr_6LzPBSIyv5PfKuLpPksGNtKkAboFvaXbZxoOWH8kZO4g37VL1U8g-LYDG1HJglrJlrqLmurGboAGN76huXycK-CQ=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQXNXMjbklpMzyB1_8TC5r441fLUtW_pG7l6Rv2pi1LHVpLnxTERCZqDRflH_yTW8ArOL38873rF7_s9OeBtQZ8rHW6V7FnrfprD0jyvuO7iLrakSW6UQQOsA52B4wAc_6R8ImPC27qAz37E1gGnuaQ0zh1B-sQUgmhHzsivA2LwlmcrR-qxj-Y9hNTa9yYNmrf_Uf9XAanoxXLqIjU=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQVTzFqCOymvjK07HKZORItekFnIqrcbDDp0Ia1w1DkwECogoAajIUmFNkwRr4aiAieMPpPz9V8lZFgKw4DYrUtHLUJCNMEiuCqRFvl59g9dGsGuOYzA3pTFboInx_zgBtUtGb3ppI810XciAltxxTtCpbfvp8IxK4wMby6CPdBYOIbynPexO0WOkbEqsQuYAVlh1IayUmI5bKdcmec=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQXINOu883DInLIKjCZ20hK1bFEYDKLjO7XFiTXcCAH9krxgovTPohUvOzkQULwsUQhYr4tZkc7B7hOGFwQHBv62JT5AMx7N_xfPhdSYd7X8uGkjGv-KCFjvTYg27HE8--5lP_v-fSZipP1R--K1RyHwSIuOc0wIgIJFZ6tKCaZZQRJe82COECC6gKwY-Ivqaj6GfGfWlz7Qikm3=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQXTsqH0dyJLH9CqD39PDpr1jaVxLMhGVRcAU7IQ4WnM9gIrm94cL5yMFKn_mafu7FYdZjFdDzKIVYvoSSHvDmjYk5eqtPReupEzofyvCpFFSnHzDDg4ZGKo_xyKpc_Jhd5KCA8AP6Ja39zdFwT741hKTmbD7Zf5mWtFqf_XthtGZ_OXY3ySNfpr6JtLJpgiQaVEYOOHM3uXg7WeOFM=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQUVenA9m-834ERKXxJ4NkdLDD2Mhk5K1ZWfSoDgHcedUlKLHcDHMZbM4DCX-6AgYJXySfRxaZx5b4VabiOGpDteL_qunGFKQd-5bEvmPfiCHZAJVieN5yR4UlSzA4A3e2kDtPBWjnS1xo-IdHDR4bv4qMkF77CSLNTllZdaD--ZhA0u6FejCMryLphjpYLXHnZb57b_sW6gZcTd=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQVAGjxA5UX9RlyiFBi94yucuvGeKGSIgy4VUD-V07bDiQcPOfoxV0Suzg-xRdjHDqjJaXDhGXUBzww8EVS8yjEdOz77tgu9vz1Sc5HeVN7rLz_lo5-_GKqrpRXVNd8u_YZhdWxV1b5iMP_hdGwAdBSxa55z7l-vx93WzYSaEVVl8L1jMQSwhJNDlJXlfEXOa_MoX22PgY8t3k9ymCOAtYGTw44gg4j82-T7RS5r=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQW8B1rGZrZGpii9DRKswTECcdawTUP5mrwA7dOkeYANh6gTEszMwsys8zl1IAT0I6eKklYEtsgocXmoEHXVEdYy0KwPl1ipwuBg1kxCpvxy9va838i5E063-XKrmXrAIVem-t1zx-hvzJ2TXX2GRGoIiuUGTGDQFxEqeRKQWLxURpIchQryD_T40Fdckq3LhSBXKoa7zpo7i10xMCksVlhFIy9mCefxihDkLaYw=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQXoFUy6qbH1pw4QwDT_DEgs0m2z_zelxZOthHl8L8Sxms2pClzqs5O9fZANrExWTbAEhTYgiIKwPsNK-6BrRQ_HxDm19-tdOMVX1cduAeousFKxHAhzHFgZidEZ7-4EtUcfh8-6jZN9hVGvF9e5UPQbAXHRc7CI3me6odcXwC01H1dF765AQVNBxRye5kilyoQPKeZZaz2932DzgzbVWz6QN_P0evZfUXiSJdJj5v8=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQUgbqvU3XVADNN0Pl66Jeo4oBj1rr0BfakLiRtd8YBqLNlZNl7wTpliHfRziGi3vDCMY9qKHB7gj4Y95H4RTVkeQxF9-TPNopGwYFBvpk2PHJs0WliGZ7y7rIFJjU5bhz_m1WJjwi-KCcFS0JwDrEHc6ylA_NDqRhnAczBn29hqYQtV7sjRig20NLvNxYffHcUMdlURjFva6K9v3Y8FWc_cLFR9D-qRLr_B70ySp3E=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQULeEFoyCfHEKxZQ7BkiGYzwLYz3DkFxBlxYtt1uocC26C0zTqi20M3D2mDqbqogTgJpOWJb75G3TEq5RlpCRDblxpMWXfargqHhcFZ1_Nzn2WSyIwP-5ZZOChmR0L_9EHMCFnbRMnJtMoLiLOe3tp1lLBC-f7e1_-_UJ42PF_0GLqi2VGkBw89jFOvJihDUSlGdNDZC36hGcoQvYc=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQV665TGgJeWpq4fTE6WJMTKJj1wWQVAxFudhsHfem3bcIHBckszfp6cNeWTCEYrybtGaWX8pZzwVg-gBN_R08GTl__rNPd9bGauu-vYpF0T6uTIgoX_J-EWTdANp2lwZlXYZf9jJP5D_a9_GLthUKAz-4GnDgUycogQnGZRcWgn_C_mgvpIJqk0OACuho9mOLtsxHcN6sr0nbL4=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQUljDKXnxMx9zth5xW976aMUmHo_PlFpHhvKf8NPhGg9KRlGgyJAM6vnQOwUxhrIyrQFiEMVuOMOJ67Y0KPRHxv4EbyXLxAGeTJu7WTmgnpkwxKtfjAG-i-_ANPXyjWdQhh-qwM3jVcTYtgPEa1mUiowgtwvdJCsx1ZOpNG-ewNSzbb8R3gDIMN9nysmMAaHtztNzOvFFYxzbEV=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQVyLq-_-1fyM6XvxuYRY5ZqDCWRdwb68ucAgugXjqLGJjEe0ctZ9YftsbjzcLeiacsHbrQo-23zsHUerh24Jt-RGhV7jmSBakTHJHLW6kGVEzsoIzZAX8meAS2U6QALQhugg9vcgaZ10qjEYoTPJKitfqiCwzbzUCSHZcgmhjx4Spbwskj0j7RshIABxbhp22GdO4Y8OkLE6P5b4qY=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQXUYrkHx4N03rteysuCx2RCs4CYxSsGrpFBmnRGj0T2pGCE_BIPUmJ9L-um8mBwJJZDpAppwDbhXMQ5PNGpqCnyKMuRdaDHGSL62H7otdBA1oOCfWNp_C_fh_eK_6YJH-sbZm25x9bUyu6PWYk1Bvy5NfvenTL4Zeu-QnXqW4KqQev9gCPjBbfuXEm8UectWXRQ0Pxa1SC-i_UNQnQ=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQVD8fvlvi3kMUCrWbOwr9TGrLIv00BlBlBCySnshd1ShZQ7fEJpSIL52E0Gw2XfZbo5JCcNSWtJwejM-R86Qt1qP8_1RD86UVCDelsnG8esaiG_SD1hZFmzXyAbqKg4gWtEdKmT8_QJG4ExLQy1hF-BXiYS9rmNdQRe2E_VdFwJ8uN6X1_JESNaCtzf9waa5NJBqYgmiq7cWohvvyo=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQWpH-zkgceEwjHO-C_FND0tOenIm3IvKXDbS1E0nSlYpL5XDSJ0W4tBeDY0kUI4c4M-jrRFFJXDNkZJcUE6SOY_cjTOr9iSZu8U_H4fRuRWT2gAhLw1URN7mX4K69cWU1r6sKpr7GQxEg0APFEwNUJk_f0hGv8vm8Sbv-OAk8v2_qY5Ex12DCdY2bzDjfsh-goiq3t7CHDMDIfNUMs=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQXjjBC7G-LzILiA9MM5Z71r_BC4n94w-sJDZL8LrXeoQnHB5xM3UNyrT6otjNuxPXKbEf5sT0dnJPyyFf-RjaqmH1Y-T-smbXT3JNZPkYNxDgAfy-UiaqkctusM9YvwZBCflShDPJrsWpV5ZepwFCfZAyNxqM8wVTte7gMUVxB89mRONu4vXFck2xPxZ-uakm0lOXClW9rSLxIg=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQU68mtGeoGR2552hnAKdA7HPW0GSvpG2AbC7we_J680_XVlrtZJb9wH8_29yk25GPYy-WUdmjRAulURKz4-zsErHo4PYoEZRZh9F3VLT_P3096SszsVk8VIK_alHqPkzGzLkchqYohKNOk959tueBWK5-BIrHdUXm_S3BqF51Qt5IHPfEu2r_kVkWVsKHgNoAhvGMiJwk_tKJMe=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQUDmtAKaNQ3U8oUoeFjxQZ899Zyb_2CeccEO7JGflxwFSNp6tCnjMZmv9KvVKfFSXEW9pIvHfb98_ncgK5nW5WOT2wDdsojuqST96CUQyXsGgQI2dNNk1Q86q02CrIugr7vM76v661c2dR28YXpk-8QbASo49AhcKYMAgH77l0w6eDaX63ryxszhkUW1bwethaB8u0jRUoT2yE2p_0=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQVZ8iJ0kIhtOV4f__5MvzutUJ1Y40Ffcz6fEkSkEiNVt1LQTgjQB03m3_ak_55VVfvV5ovKGQuaOTJ-1ul-ipJ5bJ7MLJei1Mr05h_N2CVKRu6ds0_lFz1Vt7gqwR1ietmfBI_zm2UvqlvalLFrb-CI3jnvG8nfUj2aniHRAZ3BbiiE_c2w85hAiNlbRxgZc3qrntcwESBJ7GZq=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQUtzaGW0tG8zTyW6hX_ylQm-0ENgH-YgwISaaBWJqbQznX_pYB-SeJRK_26gD_KIlJGGYRvkV8YMSKXyah2_9hc2AJaO3AU9wrXcjHJXkaqYq-10eXyxpVkbYnwDzN8lTlhqzHGtVArsE0UM6_jqvUoCpkQ--mIFKc1Kd3klH-rfNXDu7pt-fEoBi-_UQDBVDzX7GwKo0pVWDJNCzs=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQW-dpkaNLtwnCXxt2rsXO7046FCelEy_YBR5yTO2MHpKzhy-culH13dC4a3IjrBZlv2NdTYTYx9OUDw263_ic7YjpR_G6kZ1SPh_aAIJqjvuweg5gwdW0TEER1R9Y8UC44JYxaG51Uy6k5Ug45eHhpHONvSS9_d-zy6l-jheH6DP2Si4mXByPAr_WiW1LDN4-_cTRlpzs9moQDP-38=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQUrTuapfbD3J0ekT7BkPz2nODr6TDRtIMOdSYAdobGE9SAyYQTnB5E5eE_LNil8Zw-6iG_2K5hbwLzjgSi_jdlglOISoY0eN3Yab1OhsNo0_40n5CWSphhIPTeq-0D8llCNJ7nm0W-eBSTwsG9CNkKfWl6dVZFDr4Y_Xo9HC2awLfvS0n0Mb6ksc6v4VYIGrjn4XHxawAN6Vmhk=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQXHaRBM3GL0fQdbxngay7pzfsubJFR89-Xq88kK7-K37gnjcBCegah4QN-am6HTgCXZJQsiezHmfEieEamp1nOuPZMLyA-5UTcq4CwGgfpiVnsyAu6brourEX4WYChlLpe_UaBEKTVQczWwaEQDUn0ee9NqLSBOoy40gd-PBTUlzebxhgcGzQsAm1KURWpN5zieQDG3xUfWecLOMLA=w1280",
-      "https://lh3.googleusercontent.com/sitesv/AG8ngQUknFFfl8Enu81xOxCNlNnwPEABGCaxiXP73_7-bV0aProbckNiPQ81jtOY6n_r9ZPuzTOZdQl1bktxaqobAA5xbudBIX586ImTRyzmYrw11IXJIKxVzM91_UPAAZtvLAHD3jQp-vJk5osTXob5V3wSoqkVjIL-1lAZevbhpBMwz-kCjcpLc48Q4dQRE1tOU9HkmftJcC8fGVQ9=w1280"
+      "images/legacy/awards/award-gallery-01.jpg",
+      "images/legacy/awards/award-gallery-02.jpg",
+      "images/legacy/awards/award-gallery-03.jpg",
+      "images/legacy/awards/award-gallery-04.jpg",
+      "images/legacy/awards/award-gallery-05.jpg",
+      "images/legacy/awards/award-gallery-06.jpg",
+      "images/legacy/awards/award-gallery-07.jpg",
+      "images/legacy/awards/award-gallery-08.jpg",
+      "images/legacy/awards/award-gallery-09.jpg",
+      "images/legacy/awards/award-gallery-10.jpg",
+      "images/legacy/awards/award-gallery-11.jpg",
+      "images/legacy/awards/award-gallery-12.jpg",
+      "images/legacy/awards/award-gallery-13.jpg",
+      "images/legacy/awards/award-gallery-14.jpg",
+      "images/legacy/awards/award-gallery-15.jpg",
+      "images/legacy/awards/award-gallery-16.jpg",
+      "images/legacy/awards/award-gallery-17.jpg",
+      "images/legacy/awards/award-gallery-18.jpg",
+      "images/legacy/awards/award-gallery-19.jpg",
+      "images/legacy/awards/award-gallery-20.jpg",
+      "images/legacy/awards/award-gallery-21.jpg",
+      "images/legacy/awards/award-gallery-22.jpg",
+      "images/legacy/awards/award-gallery-23.jpg",
+      "images/legacy/awards/award-gallery-24.jpg",
+      "images/legacy/awards/award-gallery-25.jpg",
+      "images/legacy/awards/award-gallery-26.jpg",
+      "images/legacy/awards/award-gallery-27.jpg",
+      "images/legacy/awards/award-gallery-28.jpg",
+      "images/legacy/awards/award-gallery-29.png",
+      "images/legacy/awards/award-gallery-30.jpg",
+      "images/legacy/awards/award-gallery-31.png"
     ],
     "contact": [
       "https://lh3.googleusercontent.com/sitesv/AG8ngQWi-Qob1BamA_oNFqKzWQlnn14AbbyGAn_ELoYYKKUPZ5sfADM8McAbVvWR4pTxbvl2VUJszOj1eMP4jdmZ_LRcLfbpzrmDnHhyxLCrknJqr_WYWpgO2H0ikKOGLg7q_qPwI-AmlgzlJ_JOBepf6Y6CcNhV6duAlcFfphQcZHTrMsIkeUuPNakAvvqSUYg0FE7-hXLXwh7DnO9q=w1280",

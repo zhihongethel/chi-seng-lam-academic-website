@@ -3,6 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import { researchAreas } from '../data/site';
 import { legacy } from '../data/legacy';
+const base = import.meta.env.BASE_URL;
+const linkTo = (href: string) => `${base}${href}`.replace(/\/+/g, '/');
 ---
 
 <BaseLayout title="Research | Chi-Seng Lam" description="Research themes of Professor Chi-Seng Lam at the University of Macau, spanning power electronics, power management ICs, renewable energy, and wireless power transfer.">
@@ -35,6 +37,57 @@ import { legacy } from '../data/legacy';
     <div class="container">
       <div class="section-head"><p class="eyebrow">Research projects</p><div><h2>Externally and internally funded research.</h2></div></div>
       <ol class="archive-list numbered-archive">{legacy.researchProjects.map((project) => <li>{project}</li>)}</ol>
+    </div>
+  </section>
+
+  <section class="section white">
+    <div class="container">
+      <div class="section-head"><p class="eyebrow">Project gallery</p><div><h2>Low Power IC Design.</h2><p style="font-weight:700">Integrated DC-DC Converters, Voltage Reference &amp; Integrated Power Electronics Controller</p></div></div>
+      <div class="project-composite">
+        {legacy.projectGallery.lowPowerComposite.map((item, i) => (
+          <figure class={`project-composite-item${i === 0 ? ' lead' : ''}`}>
+            <img src={linkTo(item.img)} alt="Low power IC design project" loading="lazy" decoding="async" />
+          </figure>
+        ))}
+      </div>
+      <div class="student-gallery-grid project-gallery project-die-grid">
+        {legacy.projectGallery.lowPowerICDesign.map((item) => (
+          <figure class="student-award-card">
+            <div class="student-award-photo"><img src={linkTo(item.img)} alt={item.caption || 'Low power IC design project'} loading="lazy" decoding="async" /></div>
+            {item.caption && <figcaption class="student-award-caption">{item.caption}</figcaption>}
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section white">
+    <div class="container">
+      <div class="section-head"><p class="eyebrow">Project gallery</p><div><h2>High Power Electronic Circuits.</h2></div></div>
+      <p class="project-subhead">Wireless Power Transfer Converter for Battery Charging</p>
+      <div class="student-gallery-grid project-gallery project-wide-3">
+        {legacy.projectGallery.wirelessPowerTransfer.map((item) => (
+          <figure class="student-award-card">
+            <div class="student-award-photo"><img src={linkTo(item.img)} alt="Wireless power transfer project" loading="lazy" decoding="async" /></div>
+          </figure>
+        ))}
+      </div>
+      <p class="project-subhead">Voltage and Current Quality Compensators &amp; PV Power Generation System</p>
+      <div class="student-gallery-grid project-gallery project-wide-6">
+        {legacy.projectGallery.qualityCompensatorsPV.map((item) => (
+          <figure class="student-award-card">
+            <div class="student-award-photo"><img src={linkTo(item.img)} alt="Voltage and current quality compensators project" loading="lazy" decoding="async" /></div>
+          </figure>
+        ))}
+      </div>
+      <p class="project-subhead">Development Process for Industrialized Current Quality Compensator</p>
+      <div class="student-gallery-grid project-gallery">
+        {legacy.projectGallery.industrializedCompensator.map((item) => (
+          <figure class="student-award-card">
+            <div class="student-award-photo"><img src={linkTo(item.img)} alt="Industrialized current quality compensator development" loading="lazy" decoding="async" /></div>
+          </figure>
+        ))}
+      </div>
     </div>
   </section>
 </BaseLayout>
